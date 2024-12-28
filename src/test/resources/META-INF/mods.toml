@@ -1,0 +1,16 @@
+modLoader="javafml"
+loaderVersion="[0,)"
+license="TEST"
+
+[[mods]]
+    modId="testmod"
+    version="0"
+    displayName="TEST"
+
+[[dependencies.testmod]]
+    modId="minecolonies_hordes"
+    mandatory=true
+    versionRange="[0.0,)"
+    ordering="AFTER"
+    side="BOTH"
+    
