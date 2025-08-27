@@ -35,24 +35,4 @@ public abstract class HordeEventMixin
 
 	}
 
-	@Redirect(method = "spawnWave(Lnet/minecraft/server/level/ServerPlayer;I)V", remap = false, at = @At(value = "INVOKE", target = "Lnet/smileycorp/atlas/api/util/VecMath;closestLoadedPos(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/Vec3;D)Lnet/minecraft/core/BlockPos;", remap = false))
-	private BlockPos spawnWave_getClosestLoadedPos2(Level level, BlockPos basepos, Vec3 direction, double radius)
-	{
-		var colonyManager = MinecoloniesAPIProxy.getInstance().getColonyManager();
-
-		while (true)
-		{
-			var pos = VecMath.closestLoadedPos(level, basepos, direction, radius);
-
-			if (colonyManager.isCoordinateInAnyColony(level, pos))
-			{
-				radius += 16.0D;
-				continue;
-			}
-
-			return pos;
-		}
-
-	}
-
 }
