@@ -3,9 +3,7 @@
 	"package": "steve_gall.minecolonies_hordes.mixin.common",
 	"minVersion": "0.8.5",
 	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"hordes.HordeEventMixin"
-	],
+	"mixins": [],
 	"injectors": {
 		"defaultRequire": 1
 	},
