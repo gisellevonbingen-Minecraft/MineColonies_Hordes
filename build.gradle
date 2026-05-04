@@ -13,10 +13,6 @@ group = rootProject.maven_group
 
 repositories {
     maven {
-        name "JEI"
-        url "https://dvs1.progwml6.com/files/maven"
-    }
-    maven {
         name "ModMaven"
         url "https://modmaven.dev"
     }
